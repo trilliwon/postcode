@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oms-xy-EgA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Address-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PostCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awp-w1-TU7">
+                                <rect key="frame" x="287" y="159.5" width="52" height="30"/>
+                                <state key="normal" title="우편번호"/>
+                                <connections>
+                                    <action selector="postCodeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5r-cy-9K1"/>
+                                    <segue destination="S7w-6J-79D" kind="presentation" identifier="-" id="Ttk-Dk-Q49"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-mY-hX1">
+                                <rect key="frame" x="36" y="164" width="53.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.38431372549999998" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuB-dI-Fap">
+                                <rect key="frame" x="36" y="205" width="40" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.38431372549999998" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iy3-mY-hX1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="6zl-GM-sFh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="awp-w1-TU7" secondAttribute="trailing" constant="20" id="7Fd-9B-zJI"/>
+                            <constraint firstItem="iuB-dI-Fap" firstAttribute="top" secondItem="iy3-mY-hX1" secondAttribute="bottom" constant="20" id="Ij6-1C-76C"/>
+                            <constraint firstItem="iuB-dI-Fap" firstAttribute="leading" secondItem="iy3-mY-hX1" secondAttribute="leading" id="LZl-ab-YWF"/>
+                            <constraint firstItem="awp-w1-TU7" firstAttribute="centerY" secondItem="iy3-mY-hX1" secondAttribute="centerY" id="UPc-fN-L6k"/>
+                            <constraint firstItem="iy3-mY-hX1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="huX-Db-8f5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Address" id="9nW-cg-XBH"/>
+                    <connections>
+                        <outlet property="address1Label" destination="iuB-dI-Fap" id="5bo-bH-k6s"/>
+                        <outlet property="postCodeButton" destination="awp-w1-TU7" id="MyY-F9-fhT"/>
+                        <outlet property="postCodeLabel" destination="iy3-mY-hX1" id="N38-gU-MK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276" y="135.38230884557723"/>
+        </scene>
+        <!--주소 검색-->
+        <scene sceneID="obD-wG-Tff">
+            <objects>
+                <viewController id="uJv-Up-BBa" customClass="PostCodeSelectionViewController" customModule="PostCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lWj-Uw-ETQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="BzS-A3-4Pw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UoW-x3-m7U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="주소 검색" id="B2d-TE-1YZ">
+                        <barButtonItem key="leftBarButtonItem" title="닫기" id="Ecy-eM-FMP">
+                            <connections>
+                                <segue destination="60B-qk-SdK" kind="unwind" identifier="u" unwindAction="unwindFromPostCodeSelectionView:" id="agn-o6-d7d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="60B-qk-SdK" kind="unwind" identifier="unwind" unwindAction="unwindFromPostCodeSelectionView:" id="rPh-LF-3h6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnI-FU-mBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="60B-qk-SdK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3214" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="laD-lE-XmB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S7w-6J-79D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zd0-sE-sdD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uJv-Up-BBa" kind="relationship" relationship="rootViewController" id="tsJ-BF-NEY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eig-Mh-z6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247.1999999999998" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kbB-Os-78g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oms-xy-EgA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zYv-1h-8Uj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e6b-kU-Iw2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGR-4B-cJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
