@@ -26,7 +26,6 @@
                                 <rect key="frame" x="287" y="159.5" width="52" height="30"/>
                                 <state key="normal" title="우편번호"/>
                                 <connections>
-                                    <action selector="postCodeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5r-cy-9K1"/>
                                     <segue destination="S7w-6J-79D" kind="presentation" identifier="-" id="Ttk-Dk-Q49"/>
                                 </connections>
                             </button>

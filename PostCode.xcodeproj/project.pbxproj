@@ -14,6 +14,7 @@
 		CC131B571DCF142000CACD97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC131B551DCF142000CACD97 /* LaunchScreen.storyboard */; };
 		CC131B621DCF142000CACD97 /* PostCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC131B611DCF142000CACD97 /* PostCodeTests.swift */; };
 		CC131B6D1DCF17BB00CACD97 /* PostCodeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC131B6C1DCF17BB00CACD97 /* PostCodeSelectionViewController.swift */; };
+		CC259D7D1DCF66B80072A047 /* postcode.html in Resources */ = {isa = PBXBuildFile; fileRef = CC259D7C1DCF66B80072A047 /* postcode.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		CC131B611DCF142000CACD97 /* PostCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCodeTests.swift; sourceTree = "<group>"; };
 		CC131B631DCF142000CACD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC131B6C1DCF17BB00CACD97 /* PostCodeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCodeSelectionViewController.swift; sourceTree = "<group>"; };
+		CC259D7C1DCF66B80072A047 /* postcode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = postcode.html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				CC131B4C1DCF142000CACD97 /* AppDelegate.swift */,
 				CC131B4E1DCF142000CACD97 /* ViewController.swift */,
 				CC131B6C1DCF17BB00CACD97 /* PostCodeSelectionViewController.swift */,
+				CC259D7C1DCF66B80072A047 /* postcode.html */,
 				CC131B501DCF142000CACD97 /* Main.storyboard */,
 				CC131B531DCF142000CACD97 /* Assets.xcassets */,
 				CC131B551DCF142000CACD97 /* LaunchScreen.storyboard */,
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC131B571DCF142000CACD97 /* LaunchScreen.storyboard in Resources */,
+				CC259D7D1DCF66B80072A047 /* postcode.html in Resources */,
 				CC131B541DCF142000CACD97 /* Assets.xcassets in Resources */,
 				CC131B521DCF142000CACD97 /* Main.storyboard in Resources */,
 			);
@@ -416,6 +420,7 @@
 				CC131B681DCF142000CACD97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC131B691DCF142000CACD97 /* Build configuration list for PBXNativeTarget "PostCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				CC131B6B1DCF142000CACD97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
